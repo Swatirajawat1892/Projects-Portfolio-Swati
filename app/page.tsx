@@ -502,7 +502,7 @@ export default function Page() {
           Selected Work
         </span> */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground text-balance leading-tight mb-2">
-          Piyush S. Portfolio
+          Swati R. Portfolio
         </h1>
         <h3 className="text-xl sm:text-2xl md:text-xl font-semibold tracking-tight text-foreground text-balance leading-tight my-4">
           10+ years' experience · AI-focused full-stack developer
