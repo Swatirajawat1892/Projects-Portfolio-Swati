@@ -8,6 +8,8 @@ export interface Project {
   description: string;
   techStack: string[];
   liveLink?: string;   // 👈 optional bana do
+  image?: string;      // optional cover image, e.g. "/covers/sage50.png" (file in /public/covers)
+  caseStudyLink?: string; // for private projects: keeps the private note and adds a "View Project" button
 }
 
 interface ProjectCardProps {
@@ -22,7 +24,18 @@ export function ProjectCard({ project }: ProjectCardProps) {
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
       className="h-full"
     >
-      <article className="group flex flex-col h-full rounded-2xl border border-border bg-card/80 backdrop-blur bg-clip-padding p-7 shadow-inner transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:border-foreground/20">
+      <article className="group flex flex-col h-full overflow-hidden rounded-2xl border border-border bg-card/80 backdrop-blur bg-clip-padding p-7 shadow-inner transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:border-foreground/20">
+        {/* Cover image (optional) — bleeds to the card edges */}
+        {project.image && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={project.image}
+            alt={`${project.title} cover`}
+            loading="lazy"
+            className="-mx-7 -mt-7 mb-6 w-[calc(100%+3.5rem)] max-w-none aspect-[2/1] object-cover object-top border-b border-border"
+          />
+        )}
+
         {/* Title */}
         <h3 className="text-lg font-semibold tracking-tight text-card-foreground mb-3 leading-snug">
           {project.title}
@@ -70,6 +83,17 @@ export function ProjectCard({ project }: ProjectCardProps) {
                 This project is private due to client confidentiality. Project
                 details cannot be shared without the client&apos;s permission.
               </p>
+              {project.caseStudyLink && (
+                <a
+                  href={project.caseStudyLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-card-foreground underline-offset-4 hover:underline transition-colors duration-200 group-hover:text-primary"
+                >
+                  View Project
+                  <ExternalLink className="w-3.5 h-3.5 shrink-0" />
+                </a>
+              )}
             </div>
           )}
         </div>
