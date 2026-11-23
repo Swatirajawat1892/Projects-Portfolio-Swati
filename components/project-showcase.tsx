@@ -37,7 +37,7 @@ export function ProjectShowcase({ projects }: { projects: Project[] }) {
                   onClick={() => setActive(name)}
                   className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors duration-200 ${
                     isActive
-                      ? "bg-foreground text-primary-foreground"
+                      ? "bg-primary text-primary-foreground"
                       : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
@@ -52,9 +52,9 @@ export function ProjectShowcase({ projects }: { projects: Project[] }) {
       <div
         id="projects-top"
         aria-label="Project showcase"
-        className="max-w-6xl mx-auto px-6 pt-12 pb-28 scroll-mt-20"
+        className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-10 pt-12 pb-28 scroll-mt-20"
       >
-        <div className="grid auto-rows-fr grid-cols-1 items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid auto-rows-fr grid-cols-1 items-stretch gap-8 md:grid-cols-2 xl:grid-cols-3">
           {visible.map((project) => (
             <ProjectCard key={project.title} project={project} />
           ))}

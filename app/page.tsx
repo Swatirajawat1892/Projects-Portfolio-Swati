@@ -27,6 +27,7 @@ const projects: Project[] = [
     description:
       "An English- and Arabic-language voice assistant for inbound and outbound business calls. The workflow turns speech into text, uses an LLM and business knowledge to respond, and speaks the response back to the caller. It supports booking-related conversations, CRM handoffs and escalation to a person, with a React dashboard for operational review.",
     techStack: ["React", "Speech-to-Text", "LLM APIs", "RAG", "Text-to-Speech", "CRM APIs", "AWS (UAT)"],
+    image: "/covers/ai-voice-agents.jpg",
   },
   {
     title: "AI Medicaid Form Assistant | Voice AI & Document Automation",
@@ -34,6 +35,7 @@ const projects: Project[] = [
     description:
       "A voice-first assistant that helps users complete complex Medicaid forms without navigating every field manually. Spoken answers are mapped into structured form fields, validated, reviewed and used to generate completed PDF documents. A Next.js interface connects to FastAPI services and LangGraph/LLM workflows for guided data capture and corrections.",
     techStack: ["Next.js", "FastAPI", "Python", "LangGraph", "PostgreSQL", "Speech-to-Text / Text-to-Speech", "PDF Generation"],
+    image: "/covers/medicaid-assistant.jpg",
   },
   {
     title: "AI Assistant Suite | RAG, Reception & Lead Capture Bots",
@@ -41,6 +43,7 @@ const projects: Project[] = [
     description:
       "A business AI assistant suite combining five workflows in one platform: document question-answering, virtual reception, reminder calls, lead capture and guided intake forms. Businesses can place assistants into customer touchpoints and handle routine conversations and information gathering through a shared SaaS experience.",
     techStack: ["RAG", "Voice AI", "Conversational AI", "Workflow Automation", "Multi-Tenant SaaS"],
+    image: "/covers/ai-assistant-suite.jpg",
     liveLink: "https://ai-assistant-psi-six.vercel.app/",
   },
   {
@@ -57,6 +60,7 @@ const projects: Project[] = [
     description:
       "A booking application that lets customers choose a cleaning service, submit scheduling details and pay online. The frontend guides users through booking and checkout, while the backend stores service requests, customer details and operational status for staff, covering the full customer journey from request to payment.",
     techStack: ["React", "Node.js", "MySQL", "Stripe"],
+    image: "/covers/cleaning-booking.jpg",
   },
   {
     title: "Healthcare Workflow Automation | AI-Assisted Operations",
@@ -64,6 +68,7 @@ const projects: Project[] = [
     description:
       "A healthcare operations platform supporting clinical documentation, forms, reminders and staff-reviewed workflow automation. It connects patient information with recurring administrative processes and helps teams track tasks and follow-ups. Where AI is involved, it supports staff with information and drafting while final decisions stay with people.",
     techStack: ["React", "Next.js", "TypeScript", "Node.js", "REST APIs", "SQL", "LLM / Workflow Integration"],
+    image: "/covers/healthcare-workflow.jpg",
   },
   {
     title: "Field Management SaaS | Scheduling & Technician Workflows",
@@ -96,6 +101,7 @@ const projects: Project[] = [
     description:
       "Modernization work for a large public healthcare information portal serving different audiences and service journeys. The project involved improving the interface, backend-driven content and application flows in a bilingual environment, as practical full-stack work on a complex public platform.",
     techStack: ["Vue.js", "Laravel", "PHP", "MySQL"],
+    image: "/covers/saudi-healthcare-portal.jpg",
   },
   {
     title: "Sticky.io | Subscription CRM & Merchant Portals",
@@ -112,6 +118,7 @@ const projects: Project[] = [
     description:
       "A travel agency web platform developed end to end in Laravel, covering customer-facing pages, backend application logic and administrative tools. It supports presenting travel services and managing website content and inquiries through a connected interface, across frontend delivery, backend functionality and ongoing site management.",
     techStack: ["Laravel", "PHP", "Frontend Integration", "Admin Dashboard"],
+    image: "/covers/travel-agency-platform.jpg",
   },
   {
     title: "StaffViz | Workforce & Project Management SaaS",
