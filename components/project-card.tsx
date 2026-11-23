@@ -5,6 +5,7 @@ import { ExternalLink } from "lucide-react";
 
 export interface Project {
   title: string;
+  category?: string;
   description: string;
   techStack: string[];
   liveLink?: string;   // 👈 optional bana do
@@ -32,8 +33,14 @@ export function ProjectCard({ project }: ProjectCardProps) {
             src={project.image}
             alt={`${project.title} cover`}
             loading="lazy"
-            className="-mx-7 -mt-7 mb-6 w-[calc(100%+3.5rem)] max-w-none aspect-[2/1] object-cover object-top border-b border-border"
+            className="-mx-7 -mt-7 mb-6 w-[calc(100%+3.5rem)] max-w-none aspect-[4/3] object-cover object-top border-b border-border"
           />
+        )}
+
+        {project.category && (
+          <span className="mb-2 text-xs font-medium uppercase tracking-wider text-muted-foreground">
+            {project.category}
+          </span>
         )}
 
         {/* Title */}
@@ -77,12 +84,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
           ) : (
             <div>
               <span className="text-sm font-medium text-card-foreground">
-                Private Project
+                Private client project
               </span>
-              <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
-                This project is private due to client confidentiality. Project
-                details cannot be shared without the client&apos;s permission.
-              </p>
               {project.caseStudyLink && (
                 <a
                   href={project.caseStudyLink}
